@@ -3,12 +3,14 @@
 class Prodotto {
     private $nome;
     private $id;
-    private $categoria;
+    private $tipologia;
+    private $categoria; //cane/gatto
     private $prezzo;
 
-function __construct($_categoria, $_id) {
+function __construct($_nome, $_id, $_tipologia, $_categoria, $_prezzo) {
     $this->nome = $_nome;
     $this->id = $_id;
+    $this->tipologia = $_tipologia;
     $this->categoria = $_categoria;
     $this->prezzo = $_prezzo;
 }
@@ -19,6 +21,10 @@ public function getNome() {
 
 public function getId() {
     return $this->id;
+}
+
+public function getTipologia() {
+    return $this->tipologia;
 }
 
 public function getCategoria() {
